@@ -6,6 +6,27 @@
     <title>Magic Click&Win</title>
   </head>
   <body>
-    <p>testing</p>
+    <div id="magic"></div>
+    <script>
+      window.EpicMagicWish = {
+        events: {
+          popupBtnInteractable: "EPICMAGIC-UpdateButtonInteractable",
+          togglePopupPanel: "EPICMAGIC-TogglePopupPanel",
+          jackpotInfo: "EPICMAGIC-JackpotInfo",
+          buttonReady: "EPICMAGIC-ButtonInitialized",
+          requestPrizeInfo: "EPICMAGIC-RequestPrizeInfo",
+          prizeInfo: "EPICMAGIC-PrizeInfo",
+        },
+        supportConfig: {
+          currency: ["MYR", "AUD", "PHP"],
+          excludeSlotID: [],
+        },
+        ingame_button: {
+          // if more than MYR x then unlock
+          unlock_value: 1.0,
+        },
+      };
+    </script>
+    <script src="./EpicMagicWish.js"></script>
   </body>
 </html>
