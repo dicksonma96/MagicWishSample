@@ -26,6 +26,22 @@
           unlock_value: 1.0,
         },
       };
+
+      const MagicDiv = document.querySelector("#magic");
+
+      function openFullscreen() {
+        if (MagicDiv.requestFullscreen) {
+          MagicDiv.requestFullscreen();
+        } else if (MagicDiv.webkitRequestFullscreen) {
+          /* Safari */
+          MagicDiv.webkitRequestFullscreen();
+        } else if (MagicDiv.msRequestFullscreen) {
+          /* IE11 */
+          MagicDiv.msRequestFullscreen();
+        }
+      }
+
+      MagicDiv.addEventListener("click", openFullscreen);
     </script>
     <script src="./EpicMagicWish.js"></script>
   </body>
